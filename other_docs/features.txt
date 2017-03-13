@@ -3,8 +3,18 @@ books published by ABC
 customers who bought all the books written by ABC
 --do-- published by ABC
 number of customers who bought a particular book
-books not in stock
+books not in stock/ stock summary
 books with qty. more than X in stock
 total customers registered
-total authors or publishers connected
-...need to add a few more...( idea can introduce the concept of class {gold, silver, platinum} based on number of orders etc.)
+records of best sellers
+list books according to genre
+books in a particular price range
+most popular authors
+most popular publishers
+region wise best sellers (like a book might be a best seller in delhi)
+find a particular book by its name
+
+
+to add in the er diagram:
+* genre of the books
+* password of each customer
