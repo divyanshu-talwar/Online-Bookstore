@@ -13,7 +13,7 @@ most popular authors
 most popular publishers
 region wise best sellers (like a book might be a best seller in delhi)
 find a particular book by its name
-
+Are inter-state shipping charges applicable? (all the warehouses having the required book and the customer live in different cities).
 
 to add in the er diagram:
 * genre of the books
