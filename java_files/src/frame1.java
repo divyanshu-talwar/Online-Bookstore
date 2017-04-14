@@ -69,10 +69,6 @@ public class frame1 extends JFrame {
         c.gridx=0;
         c.gridy=1;
         
-
-    
-
-        
         Object [][] data={
         		{"d11","d12","d13"},
         		{"d21","d22","d23"},

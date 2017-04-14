@@ -69,18 +69,19 @@ public class frame2 extends JFrame {
         c.gridx=0;
         c.gridy=1;
         
-
-    
-
-        
-        Object [][] data={
-        		{"d11","d12","d13"},
-        		{"d21","d22","d23"},
-        		{"d31","d32","d33"},
-        };
+        String [][] answer = new sqlQuery().sqlQuery_run("SELECT count(author_name) from Author;");
+        if (answer != null){
+    		String[] columnnnames ={"number of customers"};
+    		q1table=new JTable(answer,columnnnames);
+        }
+//        Object [][] data={
+//        		{"d11","d12","d13"},
+//        		{"d21","d22","d23"},
+//        		{"d31","d32","d33"},
+//        };
 		
-		Object[] columnnnames ={"c1","c2","c3"};
-		q1table=new JTable(data,columnnnames);
+//		Object[] columnnnames ={"c1","c2","c3"};
+//		q1table=new JTable(answer,columnnnames);
         q1table.setRowHeight(25);
         q1table.setPreferredScrollableViewportSize(new Dimension(500,50));
         q1table.setFillsViewportHeight(true);
