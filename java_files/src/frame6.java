@@ -70,17 +70,21 @@ public class frame6 extends JFrame {
         c.gridy=1;
         
 
-    
+        String [][] answer = new sqlQuery().sqlQuery_run("select D.name as n, count(D.quantity) as qty from (select A.author_name as name, C.basket_quantity as quantity  from Author A,  WrittenBy W, Contains C where C.ISBN = W.ISBN and W.author_name = A.author_name) as D group by(n) order by(qty) DESC limit 5;");
+        if (answer != null){
+    		String[] columnnnames ={"Author Name"};
+    		q1table=new JTable(answer,columnnnames);
+        }
 
-        
-        Object [][] data={
-        		{"d11","d12","d13"},
-        		{"d21","d22","d23"},
-        		{"d31","d32","d33"},
-        };
+//        
+//        Object [][] data={
+//        		{"d11","d12","d13"},
+//        		{"d21","d22","d23"},
+//        		{"d31","d32","d33"},
+//        };
 		
-		Object[] columnnnames ={"c1","c2","c3"};
-		q1table=new JTable(data,columnnnames);
+//		Object[] columnnnames ={"c1","c2","c3"};
+//		q1table=new JTable(answer,columnnnames);
         q1table.setRowHeight(25);
         q1table.setPreferredScrollableViewportSize(new Dimension(500,50));
         q1table.setFillsViewportHeight(true);

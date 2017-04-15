@@ -16,6 +16,8 @@ public class gui extends JFrame{
 		add(button1);
 		
 		button2= new JButton("Use as ADMIN");
+		event2 e2 = new event2();
+		button2.addActionListener(e2);
 		add(button2);
 		
 		event e = new event();
@@ -32,19 +34,19 @@ public class gui extends JFrame{
 			signupgui.setLocation(500,500);
 			signupgui.setVisible(true);
 		}
-//	public class event2 implements ActionListener{
-//		public void actionPerformed(ActionEvent ev){
-//			inventory inventorygui= new inventory(gui.this);
-//			inventorygui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-//			inventorygui.setSize(1300,1300);
-//			inventorygui.setLocation(200,200);
-//			inventorygui.setVisible(true);
-//		}
-
 		
 	}
+	public class event2 implements ActionListener{
+		public void actionPerformed(ActionEvent e){
+			AdminLogin AdminLogingui= new AdminLogin();
+			AdminLogingui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+			AdminLogingui.setSize(400,200);
+			AdminLogingui.setLocation(500,500);
+			AdminLogingui.setVisible(true);
+		}
+	}
 	
-	
+
 	public static void main (String args[]){
 		gui mainpage = new gui();
 		mainpage.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

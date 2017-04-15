@@ -3,9 +3,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class cmenu extends JFrame{
+public class AdminMenu extends JFrame{
 	
-	String[] queries={"Best Sellers","Add Book to Cart","Number of customers who bought a particular book","Books in price range","most popular authors","Search by keyphrase","check for inter-state charges","Search by Genre","Find Books by author or set of author","Find books by publisher or set of publisher","Region's best seller"};
+	String[] queries={"Total number of customers registered","Best Sellers","Number of customers who bought a particular book","Books in price range","most popular authors","Search Book by keyphrase","Books with quantity more than 'X' in stock","Search by Genre","Find Books by author or set of author","Find books by publisher or set of publisher","Names of all customers who bought all the books written by some Author","Names of all customers who bought all the books published by some Publisher","Stock summary"};
 	JComboBox cb1 ;
 	String a;
 	
@@ -13,7 +13,7 @@ public class cmenu extends JFrame{
 	JButton button1;
 	final static boolean shouldFill = true;
 	String s;
-	public cmenu(String basketID){
+	public AdminMenu(String basketID){
 		super();
 		a= basketID;
 		
@@ -58,11 +58,11 @@ public class cmenu extends JFrame{
 		
 
 		public void actionPerformed(ActionEvent e){
-			cmenu cmenugui= new cmenu(a);
-			cmenugui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-			cmenugui.setSize(300,250);
-			cmenugui.setLocation(500,500);
-			cmenugui.setVisible(true);
+			AdminMenu AdminMenugui= new AdminMenu(a);
+			AdminMenugui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+			AdminMenugui.setSize(300,250);
+			AdminMenugui.setLocation(500,500);
+			AdminMenugui.setVisible(true);
 			s = String.valueOf(cb1.getSelectedItem());
 			System.out.println(cb1.getSelectedIndex());
 			
@@ -77,12 +77,12 @@ public class cmenu extends JFrame{
 				
 			}
 				
-			if (s.equals("Add Book to Cart")){
-				frame1 frame1gui= new frame1(a);
-				frame1gui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-				frame1gui.setSize(700,350);
-				frame1gui.setLocation(500,500);
-				frame1gui.setVisible(true);
+			if (s.equals("Total number of customers registered")){
+				frame8 frame8gui= new frame8();
+				frame8gui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+				frame8gui.setSize(700,350);
+				frame8gui.setLocation(500,500);
+				frame8gui.setVisible(true);
 				
 			}
 			
@@ -112,7 +112,7 @@ public class cmenu extends JFrame{
 				frame6gui.setVisible(true);
 			}
 				
-			if (s.equals("Search by keyphrase")){
+			if (s.equals("Search Book by keyphrase")){
 				frame7 frame7gui= new frame7();
 				frame7gui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 				frame7gui.setSize(300,250);
@@ -121,12 +121,12 @@ public class cmenu extends JFrame{
 			}
 				
 				
-			if(s.equals( "check for inter-state charges")){
-				frame8 frame8gui= new frame8();
-				frame8gui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-				frame8gui.setSize(300,250);
-				frame8gui.setLocation(500,500);
-				frame8gui.setVisible(true);
+			if(s.equals( "Books with quantity more than 'X' in stock")){
+				frame11 frame11gui= new frame11();
+				frame11gui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+				frame11gui.setSize(300,250);
+				frame11gui.setLocation(500,500);
+				frame11gui.setVisible(true);
 			}
 				
 			if(s.equals( "Find Books by author or set of author")){
@@ -153,12 +153,12 @@ public class cmenu extends JFrame{
 				frame13gui.setVisible(true);
 			}
 				
-			if( s.equals("Region's best seller")){
-				frame15 frame15gui= new frame15();
-				frame15gui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-				frame15gui.setSize(300,250);
-				frame15gui.setLocation(500,500);
-				frame15gui.setVisible(true);
+			if( s.equals("Stock summary")){
+				frame12 frame12gui= new frame12();
+				frame12gui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+				frame12gui.setSize(300,250);
+				frame12gui.setLocation(500,500);
+				frame12gui.setVisible(true);
 			}
 		}}}
 			

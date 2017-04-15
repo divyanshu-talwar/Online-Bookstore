@@ -2,8 +2,10 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.AbstractTableModel;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
 import javax.swing.table.TableModel;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -20,6 +22,7 @@ public class frame7 extends JFrame {
 	   JTextField searchfield;
 	   JButton searchbutton ,checkout;
 	   JTable q1table;
+	   Object[] columnnnames ={"Title","Price","Genre", "Year"};
 		
 		final static boolean shouldFill = true;
 		 
@@ -84,6 +87,8 @@ public class frame7 extends JFrame {
         c.gridx=1;
         c.gridy=2;
         searchbutton= new JButton("search");
+        event e = new event();
+        searchbutton.addActionListener(e);
         panel2.add(searchbutton,c);
         
         
@@ -112,13 +117,9 @@ public class frame7 extends JFrame {
     
 
         
-        Object [][] data={
-        		{"d11","d12","d13"},
-        		{"d21","d22","d23"},
-        		{"d31","d32","d33"},
+        Object [][] data={ {" "," "," "," ", " "},{" "," "," "," ", " "},{" "," "," "," ", " "}
         };
 		
-		Object[] columnnnames ={"c1","c2","c3"};
 		q1table=new JTable(data,columnnnames);
         
         q1table.setRowHeight(25);
@@ -135,6 +136,16 @@ public class frame7 extends JFrame {
 		
    
    }
+	public class event implements ActionListener{
+		public void actionPerformed(ActionEvent e){
+			String phrase = searchfield.getText();
+			String query = "select * from Book where title like '%" + phrase + "%';";
+			String[][] answer = new sqlQuery().sqlQuery_run(query);
+//			q1table=new JTable(answer,columnnnames);
+			DefaultTableModel tm = new DefaultTableModel(answer, columnnnames);
+	        q1table.setModel(tm);
+		}
+}
 	
 }
 

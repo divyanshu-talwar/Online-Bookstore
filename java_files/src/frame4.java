@@ -41,7 +41,7 @@ public class frame4 extends JFrame {
         
         /** ----------panel1--------- */
         panel1= new JPanel();
-        titleLabel = new JLabel("No. of customers who bought a perticular book");
+        titleLabel = new JLabel("No. of customers who bought a particular book");
         panel1.setLayout(new FlowLayout(FlowLayout.CENTER));
         checkout=new JButton("checkout");
         
