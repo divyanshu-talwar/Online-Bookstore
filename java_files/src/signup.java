@@ -31,6 +31,7 @@ public class signup extends JFrame{
 			udetailsgui.setSize(300,250);
 			udetailsgui.setLocation(500,500);
 			udetailsgui.setVisible(true);
+			dispose();
 		}
 }
 	public class event2 implements ActionListener{
@@ -38,9 +39,10 @@ public class signup extends JFrame{
 //			System.out.println("inhere success");
 			loginDetails loginDetailsgui= new loginDetails();
 			loginDetailsgui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-			loginDetailsgui.setSize(300,250);
+			loginDetailsgui.setSize(500,250);
 			loginDetailsgui.setLocation(500,500);
 			loginDetailsgui.setVisible(true);
+			dispose();
 		}
 }
 }

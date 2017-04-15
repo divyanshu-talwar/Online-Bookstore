@@ -71,24 +71,24 @@ public class AdminMenu extends JFrame{
 			if (s.equals("Best Sellers")){
 				frame2 frame2gui= new frame2();
 				frame2gui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-				frame2gui.setSize(700,350);
-				frame2gui.setLocation(500,500);
+				frame2gui.setSize(1000,700);
+				frame2gui.setLocation(200,200);
 				frame2gui.setVisible(true);
 				
 			}
 			if (s.equals("Names of all customers who bought all the books written by some Author")){
 				frame14 frame14gui= new frame14();
 				frame14gui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-				frame14gui.setSize(700,350);
-				frame14gui.setLocation(500,500);
+				frame14gui.setSize(1000,700);
+				frame14gui.setLocation(200,200);
 				frame14gui.setVisible(true);
 				
 			}
 			if (s.equals("Names of all customers who bought all the books published by some Publisher")){
 				frame15 frame15gui= new frame15();
 				frame15gui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-				frame15gui.setSize(700,350);
-				frame15gui.setLocation(500,500);
+				frame15gui.setSize(1000,700);
+				frame15gui.setLocation(200,200);
 				frame15gui.setVisible(true);
 				
 			}
@@ -96,8 +96,8 @@ public class AdminMenu extends JFrame{
 			if (s.equals("Total number of customers registered")){
 				frame8 frame8gui= new frame8();
 				frame8gui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-				frame8gui.setSize(700,350);
-				frame8gui.setLocation(500,500);
+				frame8gui.setSize(1000,700);
+				frame8gui.setLocation(200,200);
 				frame8gui.setVisible(true);
 				
 			}
@@ -106,7 +106,7 @@ public class AdminMenu extends JFrame{
 				frame4 frame4gui= new frame4();
 				frame4gui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 				frame4gui.setSize(1200,550);
-				frame4gui.setLocation(500,500);
+				frame4gui.setLocation(200,200);
 				frame4gui.setVisible(true);
 //				System.out.println(s);
 			}
@@ -114,8 +114,8 @@ public class AdminMenu extends JFrame{
 			if (s.equals("Books in price range")){
 				frame5 frame5gui= new frame5();
 				frame5gui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-				frame5gui.setSize(700,550);
-				frame5gui.setLocation(500,500);
+				frame5gui.setSize(1000,700);
+				frame5gui.setLocation(200,200);
 				frame5gui.setVisible(true);
 				System.out.println("q3");
 			}
@@ -123,16 +123,16 @@ public class AdminMenu extends JFrame{
 			if(s.equals( "most popular authors")){
 				frame6 frame6gui= new frame6();
 				frame6gui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-				frame6gui.setSize(300,250);
-				frame6gui.setLocation(500,500);
+				frame6gui.setSize(1000,700);
+				frame6gui.setLocation(1000,700);
 				frame6gui.setVisible(true);
 			}
 				
 			if (s.equals("Search Book by keyphrase")){
 				frame7 frame7gui= new frame7();
 				frame7gui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-				frame7gui.setSize(300,250);
-				frame7gui.setLocation(500,500);
+				frame7gui.setSize(1000,700);
+				frame7gui.setLocation(200,200);
 				frame7gui.setVisible(true);
 			}
 				
@@ -140,23 +140,23 @@ public class AdminMenu extends JFrame{
 			if(s.equals( "Books with quantity more than 'X' in stock")){
 				frame11 frame11gui= new frame11();
 				frame11gui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-				frame11gui.setSize(300,250);
-				frame11gui.setLocation(500,500);
+				frame11gui.setSize(1000,700);
+				frame11gui.setLocation(200,200);
 				frame11gui.setVisible(true);
 			}
 				
 			if(s.equals( "Find Books by author or set of author")){
 				frame9 frame9gui= new frame9();
 				frame9gui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-				frame9gui.setSize(300,250);
-				frame9gui.setLocation(500,500);
+				frame9gui.setSize(1000,700);
+				frame9gui.setLocation(200,200);
 				frame9gui.setVisible(true);
 			}
 				
 			if(s.equals( "Search by Genre")){
 				frame10 frame10gui= new frame10();
 				frame10gui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-				frame10gui.setSize(300,250);
+				frame10gui.setSize(1000,700);
 				frame10gui.setLocation(500,500);
 				frame10gui.setVisible(true);
 			}
@@ -164,18 +164,19 @@ public class AdminMenu extends JFrame{
 			if(s.equals( "Find books by publisher or set of publisher")){
 				frame13 frame13gui= new frame13();
 				frame13gui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-				frame13gui.setSize(300,250);
-				frame13gui.setLocation(500,500);
+				frame13gui.setSize(1000,700);
+				frame13gui.setLocation(200,200);
 				frame13gui.setVisible(true);
 			}
 				
 			if( s.equals("Stock summary")){
 				frame12 frame12gui= new frame12();
 				frame12gui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-				frame12gui.setSize(300,250);
-				frame12gui.setLocation(500,500);
+				frame12gui.setSize(1000,700);
+				frame12gui.setLocation(200,200);
 				frame12gui.setVisible(true);
 			}
+			dispose();
 		}}}
 			
 

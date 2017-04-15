@@ -125,6 +125,7 @@ public class AdminLogin extends JFrame {
 			AdminMenugui.setSize(300,250);
 			AdminMenugui.setLocation(500,500);
 			AdminMenugui.setVisible(true);
+			dispose();
 		}
 	}
 }

@@ -33,16 +33,19 @@ public class gui extends JFrame{
 			signupgui.setSize(400,200);
 			signupgui.setLocation(500,500);
 			signupgui.setVisible(true);
+			dispose();
 		}
 		
 	}
 	public class event2 implements ActionListener{
+		@Override
 		public void actionPerformed(ActionEvent e){
 			AdminLogin AdminLogingui= new AdminLogin();
 			AdminLogingui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 			AdminLogingui.setSize(400,200);
 			AdminLogingui.setLocation(500,500);
 			AdminLogingui.setVisible(true);
+			dispose();
 		}
 	}
 	
