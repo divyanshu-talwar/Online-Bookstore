@@ -76,6 +76,22 @@ public class AdminMenu extends JFrame{
 				frame2gui.setVisible(true);
 				
 			}
+			if (s.equals("Names of all customers who bought all the books written by some Author")){
+				frame14 frame14gui= new frame14();
+				frame14gui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+				frame14gui.setSize(700,350);
+				frame14gui.setLocation(500,500);
+				frame14gui.setVisible(true);
+				
+			}
+			if (s.equals("Names of all customers who bought all the books published by some Publisher")){
+				frame15 frame15gui= new frame15();
+				frame15gui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+				frame15gui.setSize(700,350);
+				frame15gui.setLocation(500,500);
+				frame15gui.setVisible(true);
+				
+			}
 				
 			if (s.equals("Total number of customers registered")){
 				frame8 frame8gui= new frame8();
