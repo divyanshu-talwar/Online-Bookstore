@@ -123,9 +123,10 @@ public class loginDetails extends JFrame {
 //			new sqlQuery().sqlQuery_update(query2);
 			cmenu cmenugui= new cmenu(basketID);
 			cmenugui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-			cmenugui.setSize(300,250);
+			cmenugui.setSize(600,250);
 			cmenugui.setLocation(500,500);
 			cmenugui.setVisible(true);
+			dispose();
 		}
 	}
 }

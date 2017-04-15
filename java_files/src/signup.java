@@ -28,7 +28,7 @@ public class signup extends JFrame{
 		public void actionPerformed(ActionEvent e){
 			udetails udetailsgui= new udetails();
 			udetailsgui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-			udetailsgui.setSize(300,250);
+			udetailsgui.setSize(600,250);
 			udetailsgui.setLocation(500,500);
 			udetailsgui.setVisible(true);
 			dispose();
@@ -39,7 +39,7 @@ public class signup extends JFrame{
 //			System.out.println("inhere success");
 			loginDetails loginDetailsgui= new loginDetails();
 			loginDetailsgui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-			loginDetailsgui.setSize(500,250);
+			loginDetailsgui.setSize(600,250);
 			loginDetailsgui.setLocation(500,500);
 			loginDetailsgui.setVisible(true);
 			dispose();

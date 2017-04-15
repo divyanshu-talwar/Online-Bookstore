@@ -60,7 +60,7 @@ public class AdminMenu extends JFrame{
 		public void actionPerformed(ActionEvent e){
 			AdminMenu AdminMenugui= new AdminMenu(a);
 			AdminMenugui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-			AdminMenugui.setSize(300,250);
+			AdminMenugui.setSize(600,250);
 			AdminMenugui.setLocation(500,500);
 			AdminMenugui.setVisible(true);
 			s = String.valueOf(cb1.getSelectedItem());

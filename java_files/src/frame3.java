@@ -122,12 +122,12 @@ public class frame3 extends JFrame {
 		q1table=new JTable(data,columnnnames);
         
         q1table.setRowHeight(25);
-        q1table.setPreferredScrollableViewportSize(new Dimension(500,50));
+        q1table.setPreferredScrollableViewportSize(new Dimension(500,200));
         q1table.setFillsViewportHeight(true);
         JScrollPane scrollPane = new JScrollPane(q1table);
         panel3.add(scrollPane,c);
-        JLabel labelcheck = new JLabel("check");
-        panel3.add(labelcheck,c);
+//        JLabel labelcheck = new JLabel("check");
+//        panel3.add(labelcheck,c);
         panel3.setBorder(BorderFactory.createMatteBorder(1,1,5,1,Color.BLACK));
         add(panel3,c);
         

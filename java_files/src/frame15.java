@@ -44,7 +44,7 @@ public class frame15 extends JFrame {
         
         panel1.add(titleLabel);
         //panel1.add(checkout);
-        titleLabel.setFont(new Font("Lucida Handwriting", Font.PLAIN, 44));
+        titleLabel.setFont(new Font("Lucida Handwriting", Font.PLAIN, 34));
 
         c.ipady = 40;
         c.weighty = 0.0;
@@ -75,18 +75,17 @@ public class frame15 extends JFrame {
         panel4.add(searchlabel);
         searchfield =new JTextField(15);
         JPanel fillpanel1=new JPanel();
+        searchbutton= new JButton("search");
+        event e = new event();
+        searchbutton.addActionListener(e);
         c.gridx=0;
         //panel2.add(fillpanel1,c);
         c.gridx=1;
         panel4.add(searchfield,c);
-        panel2.add(panel4,c);
-        
         c.gridx=1;
         c.gridy=2;
-        searchbutton= new JButton("search");
-        event e = new event();
-        searchbutton.addActionListener(e);
-        panel2.add(searchbutton,c);
+        panel4.add(searchbutton,c);
+        panel2.add(panel4,c);
         
         
         
@@ -116,7 +115,7 @@ public class frame15 extends JFrame {
 //		Object[] columnnnames ={"c1","c2","c3"};
 		q1table=new JTable(data,columnnnames);
         q1table.setRowHeight(25);
-        q1table.setPreferredScrollableViewportSize(new Dimension(500,50));
+        q1table.setPreferredScrollableViewportSize(new Dimension(500,200));
         q1table.setFillsViewportHeight(true);
         JScrollPane scrollPane = new JScrollPane(q1table);
         panel3.add(scrollPane,c);

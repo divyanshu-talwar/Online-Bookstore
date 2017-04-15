@@ -30,7 +30,7 @@ public class gui extends JFrame{
 		public void actionPerformed(ActionEvent e){
 			signup signupgui= new signup();
 			signupgui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-			signupgui.setSize(400,200);
+			signupgui.setSize(600,200);
 			signupgui.setLocation(500,500);
 			signupgui.setVisible(true);
 			dispose();
@@ -42,7 +42,7 @@ public class gui extends JFrame{
 		public void actionPerformed(ActionEvent e){
 			AdminLogin AdminLogingui= new AdminLogin();
 			AdminLogingui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-			AdminLogingui.setSize(400,200);
+			AdminLogingui.setSize(600,200);
 			AdminLogingui.setLocation(500,500);
 			AdminLogingui.setVisible(true);
 			dispose();
@@ -53,7 +53,7 @@ public class gui extends JFrame{
 	public static void main (String args[]){
 		gui mainpage = new gui();
 		mainpage.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		mainpage.setSize(400,200);
+		mainpage.setSize(600,200);
 		mainpage.setLocation(500,500);
 		mainpage.setVisible(true);
 		mainpage.setTitle("online book store");

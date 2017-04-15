@@ -90,7 +90,7 @@ public class frame1 extends JFrame {
         panel4.add(qtyfield,c);
         panel2.add(panel4,c);
         c.gridx=1;
-        c.gridy=3;
+        c.gridy=2;
         searchbutton= new JButton("ADD");
         event e = new event();
         searchbutton.addActionListener(e);
@@ -103,44 +103,7 @@ public class frame1 extends JFrame {
         panel2.setBorder(BorderFactory.createMatteBorder(1,1,5,1,Color.BLACK));
         add(panel2,c);
         
-//        /**---------panel 3----------
-//         * contains the result area JTable*/
-//
-//        panel3= new JPanel();
-//        //panel3.setBackground(Color.RED);
-//       // panel3.setBorder(newborder);
-//        //c.fill = GridBagConstraints.VERTICAL;
-//        c.ipadx = 40;
-//        c.weighty = 2.0;
-//        c.weightx = 2.0;
-//        c.gridwidth = 4;
-//        c.gridheight=6;
-//        c.gridx=0;
-//        c.gridy=2;
-//               
-//        Object [][] data={
-//        		{"d11","d12","d13"},
-//        		{"d21","d22","d23"},
-//        		{"d31","d32","d33"},
-//        };
-//		
-//		Object[] columnnnames ={"c1","c2","c3"};
-//		q1table=new JTable(data,columnnnames);
-//        
-//        q1table.setRowHeight(25);
-//        q1table.setPreferredScrollableViewportSize(new Dimension(500,50));
-//        q1table.setFillsViewportHeight(true);
-//        JScrollPane scrollPane = new JScrollPane(q1table);
-//        panel3.add(scrollPane,c);
-//        JLabel labelcheck = new JLabel("check");
-//        panel3.add(labelcheck,c);
-//        panel3.setBorder(BorderFactory.createMatteBorder(1,1,5,1,Color.BLACK));
-//        add(panel3,c);
-        
-
-		
-   
-   }
+  }
 	public class event implements ActionListener{
 		public void actionPerformed(ActionEvent e){
 			String name = searchfield.getText();

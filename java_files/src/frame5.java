@@ -82,14 +82,20 @@ public class frame5 extends JFrame {
         c.gridx=1;
         panel4.add(searchfield);
         panel4.add(searchfield2);
-        panel2.add(panel4,c);
-        
-        c.gridx=1;
-        c.gridy=2;
         searchbutton= new JButton("search");
         event e = new event();
         searchbutton.addActionListener(e);
-        panel2.add(searchbutton,c);
+        c.gridx=1;
+        c.gridy=2;
+        panel4.add(searchbutton,c);
+        panel2.add(panel4,c);
+        
+//        c.gridx=1;
+//        c.gridy=2;
+//        searchbutton= new JButton("search");
+//        event e = new event();
+//        searchbutton.addActionListener(e);
+//        panel2.add(searchbutton,c);
         
         
         
@@ -123,7 +129,7 @@ public class frame5 extends JFrame {
 		q1table=new JTable(data,columnnnames);
         
         q1table.setRowHeight(25);
-        q1table.setPreferredScrollableViewportSize(new Dimension(500,50));
+        q1table.setPreferredScrollableViewportSize(new Dimension(500,150));
         q1table.setFillsViewportHeight(true);
         JScrollPane scrollPane = new JScrollPane(q1table);
         panel3.add(scrollPane,c);
@@ -132,9 +138,7 @@ public class frame5 extends JFrame {
         panel3.setBorder(BorderFactory.createMatteBorder(1,1,5,1,Color.BLACK));
         add(panel3,c);
         
-
-		
-   
+  
    }
 	public class event implements ActionListener{
 		public void actionPerformed(ActionEvent e){

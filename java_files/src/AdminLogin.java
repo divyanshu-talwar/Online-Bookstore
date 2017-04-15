@@ -122,7 +122,7 @@ public class AdminLogin extends JFrame {
 //			new sqlQuery().sqlQuery_update(query2);
 			AdminMenu AdminMenugui= new AdminMenu(basketID);
 			AdminMenugui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-			AdminMenugui.setSize(300,250);
+			AdminMenugui.setSize(600,250);
 			AdminMenugui.setLocation(500,500);
 			AdminMenugui.setVisible(true);
 			dispose();

@@ -60,7 +60,7 @@ public class cmenu extends JFrame{
 		public void actionPerformed(ActionEvent e){
 			cmenu cmenugui= new cmenu(a);
 			cmenugui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-			cmenugui.setSize(300,250);
+			cmenugui.setSize(500,250);
 			cmenugui.setLocation(500,500);
 			cmenugui.setVisible(true);
 			s = String.valueOf(cb1.getSelectedItem());
