@@ -35,7 +35,7 @@ public class signup extends JFrame{
 }
 	public class event2 implements ActionListener{
 		public void actionPerformed(ActionEvent e){
-			System.out.println("inhere success");
+//			System.out.println("inhere success");
 			loginDetails loginDetailsgui= new loginDetails();
 			loginDetailsgui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 			loginDetailsgui.setSize(300,250);

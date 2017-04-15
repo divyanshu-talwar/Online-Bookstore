@@ -69,7 +69,7 @@ public class frame12 extends JFrame {
         c.gridx=0;
         c.gridy=1;
         
-        String [][] answer = new sqlQuery().sqlQuery_run("select S.stock_quantity, S.warehouse_code, B.title, B.ISBN from Stocks S natural join Book B;");
+        String [][] answer = new sqlQuery().sqlQuery_run("select S.stock_quantity, S.warehouse_code, B.title, B.ISBN from Stocks S natural join Book B order by(S.stock_quantity);");
         if (answer != null){
     		String[] columnnnames ={"Quantity", "Warehouse Code","Title", "ISBN"};
     		q1table=new JTable(answer,columnnnames);
