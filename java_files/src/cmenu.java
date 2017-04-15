@@ -5,16 +5,17 @@ import java.awt.event.ActionListener;
 
 public class cmenu extends JFrame{
 	
-	String[] queries={"Best Sellers","Number of customers who bought a pertcular book","Books in price range","most popular authors","Search by keyphrase","check for inter-state charges","Search by Genre","Find Books by author or set of author","Find books by publisher or set of publisher","Region's best seller"};
+	String[] queries={"Best Sellers","Add Book to Cart","Number of customers who bought a particular book","Books in price range","most popular authors","Search by keyphrase","check for inter-state charges","Search by Genre","Find Books by author or set of author","Find books by publisher or set of publisher","Region's best seller"};
 	JComboBox cb1 ;
-	
+	String a;
 	
 	JPanel panel1,panel2;
 	JButton button1;
 	final static boolean shouldFill = true;
 	String s;
-	public cmenu(){
+	public cmenu(String basketID){
 		super();
+		a= basketID;
 		
 		setLayout(new GridBagLayout());
 		GridBagConstraints c= new GridBagConstraints();
@@ -57,7 +58,7 @@ public class cmenu extends JFrame{
 		
 
 		public void actionPerformed(ActionEvent e){
-			cmenu cmenugui= new cmenu();
+			cmenu cmenugui= new cmenu(a);
 			cmenugui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 			cmenugui.setSize(300,250);
 			cmenugui.setLocation(500,500);
@@ -76,9 +77,16 @@ public class cmenu extends JFrame{
 				
 			}
 				
+			if (s.equals("Add Book to Cart")){
+				frame1 frame1gui= new frame1(a);
+				frame1gui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+				frame1gui.setSize(700,350);
+				frame1gui.setLocation(500,500);
+				frame1gui.setVisible(true);
 				
+			}
 			
-			if (s.equals("Number of customers who bought a pertcular book")){
+			if (s.equals("Number of customers who bought a particular book")){
 				frame4 frame4gui= new frame4();
 				frame4gui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 				frame4gui.setSize(1200,550);

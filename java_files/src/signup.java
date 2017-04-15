@@ -19,6 +19,8 @@ public class signup extends JFrame{
 		event e = new event();
 		button1.addActionListener(e);
 		
+		event2 e2 = new event2();
+		button2.addActionListener(e2);
 //		event2 ev = new event2();
 //		button2.addActionListener(ev);
 	}
@@ -29,6 +31,15 @@ public class signup extends JFrame{
 			udetailsgui.setSize(300,250);
 			udetailsgui.setLocation(500,500);
 			udetailsgui.setVisible(true);
+		}
+}
+	public class event2 implements ActionListener{
+		public void actionPerformed(ActionEvent e){
+			loginDetails loginDetailsgui= new loginDetails();
+			loginDetailsgui.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+			loginDetailsgui.setSize(300,250);
+			loginDetailsgui.setLocation(500,500);
+			loginDetailsgui.setVisible(true);
 		}
 }
 }

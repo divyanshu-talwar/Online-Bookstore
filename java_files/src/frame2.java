@@ -69,9 +69,9 @@ public class frame2 extends JFrame {
         c.gridx=0;
         c.gridy=1;
         
-        String [][] answer = new sqlQuery().sqlQuery_run("SELECT count(author_name) from Author;");
+        String [][] answer = new sqlQuery().sqlQuery_run("SELECT * from  ( select sum(basket_quantity) as qty, ISBN from Contains group by(ISBN) ) as A natural join Book order by(qty) DESC limit 5;");
         if (answer != null){
-    		String[] columnnnames ={"number of customers"};
+    		String[] columnnnames ={"ISBN", "Quantity", "Title", "Price", "Genre", "Year"};
     		q1table=new JTable(answer,columnnnames);
         }
 //        Object [][] data={

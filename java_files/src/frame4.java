@@ -2,8 +2,10 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.AbstractTableModel;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
 import javax.swing.table.TableModel;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -20,6 +22,7 @@ public class frame4 extends JFrame {
 	   JTextField searchfield;
 	   JButton searchbutton ,checkout;
 	   JTable q1table;
+	public Object[] columnnnames = {"number of customers"};
 		
 		final static boolean shouldFill = true;
 		 
@@ -61,7 +64,7 @@ public class frame4 extends JFrame {
 
         panel2= new JPanel();
         panel2.setLayout(new GridBagLayout());
-        searchlabel = new JLabel("Search Item");
+        searchlabel = new JLabel("Search ISBN :");
         c.ipady = 40;
         c.weighty = 0.0;
         c.ipadx=40;
@@ -84,6 +87,8 @@ public class frame4 extends JFrame {
         c.gridx=1;
         c.gridy=2;
         searchbutton= new JButton("search");
+        event e = new event();
+        searchbutton.addActionListener(e);
         panel2.add(searchbutton,c);
         
         
@@ -113,21 +118,16 @@ public class frame4 extends JFrame {
 
         
         Object [][] data={
-        		{"d11","d12","d13"},
-        		{"d21","d22","d23"},
-        		{"d31","d32","d33"},
+        		{" "}
         };
-		
-		Object[] columnnnames ={"c1","c2","c3"};
-		q1table=new JTable(data,columnnnames);
-        
+        q1table=new JTable(data,columnnnames);
         q1table.setRowHeight(25);
         q1table.setPreferredScrollableViewportSize(new Dimension(500,50));
         q1table.setFillsViewportHeight(true);
         JScrollPane scrollPane = new JScrollPane(q1table);
         panel3.add(scrollPane,c);
-        JLabel labelcheck = new JLabel("check");
-        panel3.add(labelcheck,c);
+//        JLabel labelcheck = new JLabel("check");
+//        panel3.add(labelcheck,c);
         panel3.setBorder(BorderFactory.createMatteBorder(1,1,5,1,Color.BLACK));
         add(panel3,c);
         
@@ -135,6 +135,16 @@ public class frame4 extends JFrame {
 		
    
    }
+	public class event implements ActionListener{
+		public void actionPerformed(ActionEvent e){
+			String isbn = searchfield.getText();
+			String query = "Select count(basketID) as number from Contains group by ISBN having ISBN = '" + isbn + "';";
+			String[][] answer = new sqlQuery().sqlQuery_run(query);
+//			q1table=new JTable(answer,columnnnames);
+			DefaultTableModel tm = new DefaultTableModel(answer, columnnnames);
+	        q1table.setModel(tm);
+		}
+}
 	
 }
 
