@@ -1,3 +1,0 @@
-to add in the er diagram:
-* genre of the books
-* password of each customer
